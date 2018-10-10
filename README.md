@@ -1,2 +1,4 @@
 # TIL
-Today I Learned
+This is a repo to record what I learned today.
+
+
