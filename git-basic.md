@@ -93,6 +93,65 @@ View the commit history using `git log`.
 projecta$ git log
 ```
 
+## Push to a remote repository
+
+There are two fundamental ways to start working with a remote repository. 
+1. If you do not have an exisiting local repository, then you will `clone` the remote repository, creating a local repository that is associated with the remote repository.
+2. If you already have a local repository with commits that you want to push to a remote repository, then you will `add` the remote repository to your local repository
+
+Clone the remote repository with `git clone` command.
+```
+repos$ git clone https://bitbucket.org/atlassian_tutorial/helloworld.git
+Cloning into 'helloworld'...
+remote: Counting objects: 35, done.
+remote: Compressing objects: 100% (21/21), done.
+remote: Total 35 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (35/35), done.
+
+repos$ cd helloworld
+helloworld$ ls
+LICENSE	README	pom.xml	src
+
+helloworld$ git remote -v
+origin	https://bitbucket.org/atlassian_tutorial/helloworld.git (fetch)
+origin	https://bitbucket.org/atlassian_tutorial/helloworld.git (push)
+
+```
+
+Create a remote repository on Github named projecta.  
+Then add the remote repository with `git remote add` command (from your local repository).
+```
+helloword$ cd~/repos/projecta/
+projecta$ git remote add origin https://github.com/inbumsung/projecta.git
+projecta$ git remote -v
+origin  https://github.com/inbumsung/projecta.git (fetch)
+origin  https://github.com/inbumsung/projecta.git (push)
+```
+
+Create a commit in the local repository.
+
+```
+projecta$ echo "projecta's README" > README.md
+projecta$ git add README.md
+projecta$ git commit -m "add README.md"
+```
+
+Push the commit to the remote repository. The `-u` flag sets up the local and remote branches as tracking branches. `origin` is a shortcut name for the remote repository. `master` is the branch to push.
+```
+projecta$ git push -u origin master
+To https://github.com/inbumsung/projecta.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+projecta$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
+
+
+
 
 > To be uploaded
  
