@@ -150,6 +150,64 @@ Your branch is up to date with 'origin/master'.
 nothing to commit, working tree clean
 ```
 
+## References
+
+Excuting the `git show` command will show the contents of the commit object, as well as some information on what has changed.
+```
+projecta$ git log --oneline
+5d430e4 (HEAD -> master, origin/master) add README.md
+d196262 add fileA.txt
+
+projecta$ git show 5d430e4
+commit d1962622ddf356df58eb6e3c72d77e6ab9afb96b
+Author: Inbum Sung <mirinae145@gmail.com>
+Date:   Thu Oct 11 20:47:41 2018 +0900
+
+    add fileA.txt
+
+diff --git a/fileA.txt b/fileA.txt
+new file mode 100644
+index 0000000..e69de29
+```
+
+Use the `git tag` command for attaching a version lavel to the specific commit. Create an annotated tag by specifying the -a option. Use the -m option to specify a tag message. You do not need to specify a commit, because the command ddefaults to HEAD (reference to the current commit).
+
+```
+projecta$ git tag -a -m "includes feature 1" v0.1
+projecta$ git show v0.1
+tag v0.1
+Tagger: Inbum Sung <mirinae145@gmail.com>
+Date:   Sun Oct 14 16:19:38 2018 +0900
+
+includes feature 1
+
+commit 5d430e4e3058627eecb01dbc10e36d50dba034b9 (HEAD -> master, tag: v0.1, origin/master)
+Author: Inbum Sung <mirinae145@gmail.com>
+Date:   Thu Oct 11 21:32:36 2018 +0900
+
+    add README.md
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..e69de29
+
+projecta$ git tag
+v0.1
+```
+
+Push the tag to the remote repository.
+```
+projecta$ git push origin v0.1
+```
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 167 bytes | 167.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/inbumsung/projecta.git
+ * [new tag]         v0.1 -> v0.1
+```
+
+
 
 
 
