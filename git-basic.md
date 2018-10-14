@@ -341,7 +341,6 @@ projecta$ git branch -d featureX
 error: The branch 'featureX' is not fully merged.
 If you are sure you want to delete it, run 'git branch -D featureX'.
 ```
-```
 
 If you are sure that you want to delete this branch, use the `-D` option with `git branch` command.
 
@@ -353,14 +352,6 @@ projecta$ git log --oneline --graph --all
 * 5d430e4 (HEAD -> master, tag: v0.1, origin/master) add README.md
 * d196262 add fileA.txt
 ```
-
-
-
-
-
-
-## Checkout an old commit.
-
 
 
 
