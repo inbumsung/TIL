@@ -30,7 +30,7 @@ pip 18.0 from /usr/local/lib/python3.7/site-packages/pip (python 3.7)
 $ pip3 install virtualenv
 ```
 
-## Create a new virtualenv with `virtualenv -p python3 [env_name]` command.
+## Create a new virtualenv.
 `virtualenv venv` command will create a folder in the current directory which will contain the python executable files, and a copy of the pip library. The name of the virtual environment can be anything; omitting the name will place the files in the current directory instead.
 ```
 $ cd path/to/your/dev/folder/
