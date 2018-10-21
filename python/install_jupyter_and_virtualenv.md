@@ -1,5 +1,6 @@
 # Guide to setting up and using Python3, virtualenv and jupyter notebook in macOS
 The following instructions will guide you through the process of:
+- installing homebrew
 - installing python 3 using Homebrew
 - installing virtualenv
 - installing juptyer 
@@ -10,6 +11,11 @@ $ python --version
 Python 2.7.10
 $ which python
 /usr/bin/python
+```
+
+## Install Homebrew.
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
 ## Install Python 3 with Homebrew.
