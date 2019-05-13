@@ -62,8 +62,14 @@ python 3.6.5
 (venv) $ jupyter notebook
 ```
 
-### Deactivate virutual environment.
+## Deactivate virutual environment.
 ```
 (venv) $ deactivate
-$
 ```
+
+## Uninstall Python3 (in case you might want to use Anaconda)
+```
+$brew uninstall python3 
+```
+
+
