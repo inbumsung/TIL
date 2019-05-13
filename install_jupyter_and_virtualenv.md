@@ -69,7 +69,7 @@ python 3.6.5
 
 ## Uninstall Python3 (in case you might want to use Anaconda)
 ```
-$brew uninstall python3 
+$ brew uninstall python3 
 ```
 
 
